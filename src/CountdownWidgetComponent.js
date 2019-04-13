@@ -7,13 +7,13 @@ import moment from 'moment';
 Scrivito.provideComponent('CountdownWidget', ({ widget }) => {
   const dateInFuture = moment(widget.get('date'), 'YYYY-MM-DD HH:mm:ss');
 
-    /*if (!dateInFuture.length) {
+  if (!dateInFuture.length && Scrivito.isInPlaceEditingActive()) {
     return (
-      <InPlaceEditingPlaceholder center={ true }>
-        Create Accordion Items in widget properties.
-      </InPlaceEditingPlaceholder>
+        <h4 className="text-center">
+          Provide a date in future in the widget properties.
+        </h4>
     );
-  }*/
+  }
 
   return (
     <h3>{widget.get('prefix')}
