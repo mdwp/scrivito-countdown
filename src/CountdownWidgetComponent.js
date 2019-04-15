@@ -1,13 +1,12 @@
 import * as React from 'react';
 import * as Scrivito from 'scrivito';
-import ReactMomentCountDown from 'react-moment-countdown';
-import moment from 'moment';
+import Countdown from 'react-countdown-now';
 
 
 Scrivito.provideComponent('CountdownWidget', ({ widget }) => {
-  const dateInFuture = moment(widget.get('date'), 'YYYY-MM-DD HH:mm:ss');
+  const dateInFuture = widget.get('date');
 
-  if (!dateInFuture.length && Scrivito.isInPlaceEditingActive()) {
+  if (!dateInFuture && Scrivito.isInPlaceEditingActive()) {
     return (
         <h4 className="text-center">
           Provide a date in future in the widget properties.
@@ -16,10 +15,11 @@ Scrivito.provideComponent('CountdownWidget', ({ widget }) => {
   }
 
   return (
-    <h3>{widget.get('prefix')}
-    <ReactMomentCountDown  toDate={dateInFuture} targetFormatMask='YY-MM-DD HH:mm:ss' />
-    {widget.get('postfix')}
-    </h3>
+    <div>
+    <span className="prefix">{widget.get('prefix')}</span>
+    <span className="time"><Countdown  date={dateInFuture}  /></span>
+    <span className="postfix">{widget.get('postfix')}</span>
+    </div>
   );
 });
 

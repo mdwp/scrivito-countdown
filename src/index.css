@@ -1,0 +1,11 @@
+.prefix {
+  padding-right: 6px;
+}
+
+.postfix {
+  padding-left: 6px;
+}
+
+.prefix, .postfix, .time {
+  font-size: 22px;
+}

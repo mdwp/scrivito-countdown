@@ -25,9 +25,7 @@
   },
   "homepage": "https://github.com/mdwp/scrivito-countdown#readme",
   "dependencies": {
-    "moment": "^2.24.0",
-    "react-moment-countdown": "0.3.0",
-    "react-moment-proptypes": "^1.6.0"
+    "react-countdown-now": "2.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
