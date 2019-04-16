@@ -13,7 +13,7 @@ Open your terminal.
 
 `$ cd` to your Scrivito project
 
-```
+```shell
 $ npm install scrivito-countdown
 ```
 
@@ -21,37 +21,16 @@ Import the widget in your javascript (e.g. in `index.js` or `Widgets/index.js`).
 
 Add this line to your index.js:
 
-```
+```js
 import "scrivito-countdown";
 ```
 
-## Development
+## Features
+A time counter for an event in the future.
 
-With `npm run build` you can build the package into `build/`.
+## Widget properties
 
-With `npm start` you'll start a continues process, that rebuilds `build/` automatically once the source code is changed.
-
-To add this library locally do the following in your scrivito app:
-
-```
-npm install file:<path to build folder>
-```
-
-e.g.
-
-```
-npm install file:../scrivito-countdown/build/
-```
-
-To publish the package:
-
-```
-npm i && npm run build && cd build/ && npm publish
-```
-
-## Check code quality
-
-With `npm run eslint` and `npm run es-check` you can check your coding quality.
-
-
-
+In the widget properties you can set:
+- Postfix. A text that will be displayed before the time counter.
+- Date in the future
+- Prefix. A text that will be displayed after the time counter.
